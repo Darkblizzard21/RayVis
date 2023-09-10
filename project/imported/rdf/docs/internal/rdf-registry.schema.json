@@ -1,0 +1,90 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "title",
+    "properties": {
+        "version": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 1,
+            "title": "File version"
+        },
+        "chunkTypes": {
+            "type": "array",
+            "title": "Known chunk types",
+            "items": {
+                "type": "object",
+                "uniqueItems": true,
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 16,
+                        "description": "The RDF chunk name",
+                        "title": "Chunk name"
+                    },
+                    "producer": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "uniqueItems": true,
+                        "description": "The list of applications or libraries producing this chunk type.",
+                        "title": "Produced by ..."
+                    },
+                    "consumer": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "minLength": 1
+                        },
+                        "uniqueItems": true,
+                        "description": "The list of applications or libraries consuming this chunk type.",
+                        "title": "Consumed by ..."
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "A brief description of the chunk type.",
+                        "title": "Chunk type description"
+                    },
+                    "references": {
+                        "type": "array",
+                        "uniqueItems": true,
+                        "title": "List of references",
+                        "description": "The list of all references for this chunk type.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string",
+                                    "description": "Name of the reference, usually the library/application name"
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "format": "uri",
+                                    "description": "URL where to find the full specification"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "url"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "name",
+                    "producer",
+                    "consumer",
+                    "description",
+                    "references"
+                ]
+            }
+        }
+    },
+    "required": [
+        "version",
+        "chunkTypes"
+    ]
+}

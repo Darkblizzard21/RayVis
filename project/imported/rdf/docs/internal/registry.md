@@ -1,0 +1,23 @@
+# Chunk type registry
+Chunk name | Produced by ... | Consumed by ... | Description | Reference
+---|---|---|---|---
+`AdapterInfo` | MemoryTraceModule | Tools | Adapter information | [RDF](https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/adapterInfoChunkSpec.md)
+`ApiInfo` | PAL | Tools | PAL Client API information | [RDF](https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/apiInfoChunkSpec.md)
+`AsicInfo` | PAL | Tools | Device info of ASIC, on which PAL Trace is being performed | [RDF](https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/asicInfoChunkSpec.md)
+`BuildInputIndex` | RTA | RTA | Mapping of VAs to build input data | [RTA](https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md)
+`BvhBuildInput` | RTA | RTA | BVH build input | [RTA](https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md)
+`BvhIndex` | RTA | RTA | Mapping of VAs to raw BLAS/TLAS data | [RTA](https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md)
+`DDEvent` | GPU Detective Module, MemoryTraceModule | Tools | The DevDriver Event Data | [DDEvent](https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/ddEventDataChunkSpec.md)
+`GenericBlas` | RTA | RTA | RTA specific generic BLAS | [RTA](https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md)
+`GenericTlas` | RTA | RTA | RTA specific generic TLAS | [RTA](https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md)
+`GpuEncBlasDump` | RTA | RTA | Raw GPU BLAS data | [RTA](https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md)
+`GpuEncTlasDump` | RTA | RTA | Raw GPU TLAS data | [RTA](https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md)
+`GpuMemSegment` | MemoryTraceModule | Tools | Segment information | [RDF](https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/gpuMemSegmentInfoChunkSpec.md)
+`HistoryIndex` | RTA | RTA | History token index | [RTA](https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md)
+`HistoryMetadata` | RTA | RTA | Optional metadata | [RTA](https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md)
+`HistoryRayIndex` | RTA | RTA | Mapping of ray histories to tokens | [RTA](https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md)
+`HistoryTokens` | RTA | RTA | History token payload data | [RTA](https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md)
+`RawAccelStruct` | GPURT | Tools | Raw acceleration structure dump (TLAS or BLAS) | [GPURT](https://github.amd.com/AMD-Radeon-Driver/gpurt/blob/amd/stg/gpurt/gpurt/gpurtAccelStruct.h)
+`RmtData` | MemoryTraceModule | Tools | The stream data | [RDF](https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/rmtDataChunkSpec.md)
+`RmvSnapshotData` | MemoryTraceModule | Tools | Information about Snapshots taken | [RDF](https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/rmvSnapshotInfoChunkSpec.md)
+`RmvSnapshotIndex` | MemoryTraceModule | Tools | Provides a list of indices of active snapshots contained within an RDF file | [RDF](https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/rmvSnapshotIndexChunkSpec.md)

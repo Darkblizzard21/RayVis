@@ -1,0 +1,2 @@
+dxcompiler.dll filter=lfs diff=lfs merge=lfs -text
+defaultScene.rayvis filter=lfs diff=lfs merge=lfs -text

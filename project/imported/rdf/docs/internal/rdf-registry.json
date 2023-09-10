@@ -1,0 +1,327 @@
+{
+    "$schema":"./rdf-registry.schema.json",
+    "version": 1,
+    "chunkTypes": [
+        {
+            "name": "HistoryTokens",
+            "producer": [
+                "RTA"
+            ],
+            "consumer": [
+                "RTA"
+            ],
+            "description": "History token payload data",
+            "references": [
+                {
+                    "name": "RTA",
+                    "url": "https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md"
+                }
+            ]
+        },
+        {
+            "name": "HistoryIndex",
+            "producer": [
+                "RTA"
+            ],
+            "consumer": [
+                "RTA"
+            ],
+            "description": "History token index",
+            "references": [
+                {
+                    "name": "RTA",
+                    "url": "https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md"
+                }
+            ]
+        },
+        {
+            "name": "HistoryRayIndex",
+            "producer": [
+                "RTA"
+            ],
+            "consumer": [
+                "RTA"
+            ],
+            "description": "Mapping of ray histories to tokens",
+            "references": [
+                {
+                    "name": "RTA",
+                    "url": "https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md"
+                }
+            ]
+        },
+        {
+            "name": "HistoryMetadata",
+            "producer": [
+                "RTA"
+            ],
+            "consumer": [
+                "RTA"
+            ],
+            "description": "Optional metadata",
+            "references": [
+                {
+                    "name": "RTA",
+                    "url": "https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md"
+                }
+            ]
+        },
+        {
+            "name": "BvhBuildInput",
+            "producer": [
+                "RTA"
+            ],
+            "consumer": [
+                "RTA"
+            ],
+            "description": "BVH build input",
+            "references": [
+                {
+                    "name": "RTA",
+                    "url": "https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md"
+                }
+            ]
+        },
+        {
+            "name": "BuildInputIndex",
+            "producer": [
+                "RTA"
+            ],
+            "consumer": [
+                "RTA"
+            ],
+            "description": "Mapping of VAs to build input data",
+            "references": [
+                {
+                    "name": "RTA",
+                    "url": "https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md"
+                }
+            ]
+        },
+        {
+            "name": "GpuEncTlasDump",
+            "producer": [
+                "RTA"
+            ],
+            "consumer": [
+                "RTA"
+            ],
+            "description": "Raw GPU TLAS data",
+            "references": [
+                {
+                    "name": "RTA",
+                    "url": "https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md"
+                }
+            ]
+        },
+        {
+            "name": "GpuEncBlasDump",
+            "producer": [
+                "RTA"
+            ],
+            "consumer": [
+                "RTA"
+            ],
+            "description": "Raw GPU BLAS data",
+            "references": [
+                {
+                    "name": "RTA",
+                    "url": "https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md"
+                }
+            ]
+        },
+        {
+            "name": "BvhIndex",
+            "producer": [
+                "RTA"
+            ],
+            "consumer": [
+                "RTA"
+            ],
+            "description": "Mapping of VAs to raw BLAS/TLAS data",
+            "references": [
+                {
+                    "name": "RTA",
+                    "url": "https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md"
+                }
+            ]
+        },
+        {
+            "name": "GenericTlas",
+            "producer": [
+                "RTA"
+            ],
+            "consumer": [
+                "RTA"
+            ],
+            "description": "RTA specific generic TLAS",
+            "references": [
+                {
+                    "name": "RTA",
+                    "url": "https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md"
+                }
+            ]
+        },
+        {
+            "name": "GenericBlas",
+            "producer": [
+                "RTA"
+            ],
+            "consumer": [
+                "RTA"
+            ],
+            "description": "RTA specific generic BLAS",
+            "references": [
+                {
+                    "name": "RTA",
+                    "url": "https://github.amd.com/Raytracing/rta/blob/master/docs/file_formats.md"
+                }
+            ]
+        },
+        {
+            "name": "RawAccelStruct",
+            "producer": [
+                "GPURT"
+            ],
+            "consumer": [
+                "Tools"
+            ],
+            "description": "Raw acceleration structure dump (TLAS or BLAS)",
+            "references": [
+                {
+                    "name": "GPURT",
+                    "url": "https://github.amd.com/AMD-Radeon-Driver/gpurt/blob/amd/stg/gpurt/gpurt/gpurtAccelStruct.h"
+                }
+            ]
+        },
+        {
+            "name": "AsicInfo",
+            "producer": [
+                "PAL"
+            ],
+            "consumer": [
+                "Tools"
+            ],
+            "description": "Device info of ASIC, on which PAL Trace is being performed",
+            "references": [
+                {
+                    "name": "RDF",
+                    "url": "https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/asicInfoChunkSpec.md"
+                }
+            ]
+        },
+        {
+            "name": "ApiInfo",
+            "producer": [
+                "PAL"
+            ],
+            "consumer": [
+                "Tools"
+            ],
+            "description": "PAL Client API information",
+            "references": [
+                {
+                    "name": "RDF",
+                    "url": "https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/apiInfoChunkSpec.md"
+                }
+            ]
+        },
+        {
+            "name": "AdapterInfo",
+            "producer": [
+                "MemoryTraceModule"
+            ],
+            "consumer": [
+                "Tools"
+            ],
+            "description": "Adapter information",
+            "references": [
+                {
+                    "name": "RDF",
+                    "url": "https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/adapterInfoChunkSpec.md"
+                }
+            ]
+        },
+        {
+            "name": "GpuMemSegment",
+            "producer": [
+                "MemoryTraceModule"
+            ],
+            "consumer": [
+                "Tools"
+            ],
+            "description": "Segment information",
+            "references": [
+                {
+                    "name": "RDF",
+                    "url": "https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/gpuMemSegmentInfoChunkSpec.md"
+                }
+            ]
+        },
+        {
+            "name": "RmvSnapshotIndex",
+            "producer": [
+                "MemoryTraceModule"
+            ],
+            "consumer": [
+                "Tools"
+            ],
+            "description": "Provides a list of indices of active snapshots contained within an RDF file",
+            "references": [
+                {
+                    "name": "RDF",
+                    "url": "https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/rmvSnapshotIndexChunkSpec.md"
+                }
+            ]
+        },
+        {
+            "name": "RmvSnapshotData",
+            "producer": [
+                "MemoryTraceModule"
+            ],
+            "consumer": [
+                "Tools"
+            ],
+            "description": "Information about Snapshots taken",
+            "references": [
+                {
+                    "name": "RDF",
+                    "url": "https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/rmvSnapshotInfoChunkSpec.md"
+                }
+            ]
+        },
+        {
+            "name": "RmtData",
+            "producer": [
+                "MemoryTraceModule"
+            ],
+            "consumer": [
+                "Tools"
+            ],
+            "description": "The stream data",
+            "references": [
+                {
+                    "name": "RDF",
+                    "url": "https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/rmtDataChunkSpec.md"
+                }
+            ]
+        },
+        {
+            "name": "DDEvent",
+            "producer": [
+                "GPU Detective Module",
+                "MemoryTraceModule"
+            ],
+            "consumer": [
+                "Tools"
+            ],
+            "description": "The DevDriver Event Data",
+            "references": [
+                {
+                    "name": "DDEvent",
+                    "url": "https://github.amd.com/LibAmd/rdf/blob/master/docs/internal/chunkFormats/ddEventDataChunkSpec.md"
+                }
+            ]
+        }
+    ]
+}
